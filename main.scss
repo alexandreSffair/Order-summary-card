@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+$Mobile: 375px;
+$Desktop: 1440px;
+
+
+$Primary-Pale-blue: hsl(225, 100%, 94%);
+$Primary-Bright-blue: hsl(245, 75%, 52%);
+
+$Second-Very-pale-blue: hsl(225, 100%, 98%);
+$Second-Desaturated-blue: hsl(224, 23%, 55%);
+$Second-Dark-blue: hsl(223, 47%, 23%);
+
+$FontF-Primary:'Red Hat Display', sans-serif;
+$Font-base: 16px;
+$Font-peso1: 500;
+$Font-peso2: 700;
+$Font-peso3: 900;
+
+@mixin font($size:16px, $weight:500) {
+    font-family: $FontF-Primary;
+    font-size: $size;
+    font-weight: $weight;
+}
+@mixin tela ($tela) {
+    @media (min-width:$tela) {
+        @content;
+        
+    }
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    min-width:$Mobile;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background-color: $Primary-Pale-blue;
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    @include font($Font-base*1, $Font-peso1);
+    @include tela(600px){
+        background-image: url(./images/pattern-background-desktop.svg);
+        max-width: 400px ;
+        margin: auto;
+        justify-content: start;
+        margin-top: 5rem;
+        
+    }
+    @include tela(1000px){
+        justify-content: center;
+        margin-top: 0px;
+    }
+}
+
+.main{
+    background-color: $Second-Very-pale-blue;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+    &:hover{
+        transform: rotate(1deg) translate(5px, -5px);
+        box-shadow: 5px 5px 100px rgba($color: #000000, $alpha: 0.3);
+    }
+    picture{
+        img{
+            width: 100%;
+        }
+    }
+    .conteudo{
+        padding: 2rem;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 1rem;
+        h1{
+            @include font($Font-base*1.5, $Font-peso3 )
+        }
+        p{
+            text-align: center;
+            @include font($Font-base*1, $Font-peso1);
+            line-height: 1.7;
+            color:$Second-Desaturated-blue;
+
+        }
+    }
+    .price{
+        width: 100%;
+        background-color: hsl(225, 90%, 96%);;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.5rem;
+        .img{
+            object-fit: cover;
+        }
+        span{
+            text-align:left;
+            h2{
+                @include font($Font-base*0.9,$Font-peso3);
+            }
+            p{
+                color: $Second-Desaturated-blue;
+                @include font($Font-base*0.9,$Font-peso1);
+            }
+        }
+        a{
+            color:$Primary-Bright-blue;
+            @include font($Font-base*0.8,$Font-peso3);
+        }
+    }
+
+    .bt-CTA{
+        text-decoration: none;
+        @include font($Font-base*1, $Font-peso2);
+        text-align: center;
+        background-color: $Primary-Bright-blue;
+        color: $Second-Very-pale-blue;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0.6rem;
+        &:hover{
+            background-color: $Second-Dark-blue;
+        }
+    }
+    .cancel{
+        text-decoration: none;
+        @include font($Font-base*1, $Font-peso3);
+        color: $Second-Desaturated-blue;
+    }
+
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Order-summary-card",
+  "version": "1.0.0",
+  "description": "![Design preview for the Article preview component coding challenge](./design/desktop-design.jpg) <p style=\"font-size: xx-small\"> [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects. </p>  <h1 align=\"center\">   Frontend Mentor | Order summary card </h1>",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

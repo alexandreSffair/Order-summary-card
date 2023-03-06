@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 375px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: hsl(225deg, 100%, 94%);
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (min-width: 600px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    max-width: 400px;
+    margin: auto;
+    justify-content: start;
+    margin-top: 5rem;
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    justify-content: center;
+    margin-top: 0px;
+  }
+}
+
+.main {
+  background-color: hsl(225deg, 100%, 98%);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px;
+}
+.main:hover {
+  transform: rotate(1deg) translate(5px, -5px);
+  box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.3);
+}
+.main picture img {
+  width: 100%;
+}
+.main .conteudo {
+  padding: 2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem;
+}
+.main .conteudo h1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+}
+.main .conteudo p {
+  text-align: center;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: hsl(224deg, 23%, 55%);
+}
+.main .price {
+  width: 100%;
+  background-color: hsl(225deg, 90%, 96%);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+}
+.main .price .img {
+  object-fit: cover;
+}
+.main .price span {
+  text-align: left;
+}
+.main .price span h2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 14.4px;
+  font-weight: 900;
+}
+.main .price span p {
+  color: hsl(224deg, 23%, 55%);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 14.4px;
+  font-weight: 500;
+}
+.main .price a {
+  color: hsl(245deg, 75%, 52%);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 12.8px;
+  font-weight: 900;
+}
+.main .bt-CTA {
+  text-decoration: none;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  background-color: hsl(245deg, 75%, 52%);
+  color: hsl(225deg, 100%, 98%);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.6rem;
+}
+.main .bt-CTA:hover {
+  background-color: hsl(223deg, 47%, 23%);
+}
+.main .cancel {
+  text-decoration: none;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: hsl(224deg, 23%, 55%);
+}
+
+/*# sourceMappingURL=style.css.map */
